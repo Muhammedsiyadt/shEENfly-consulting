@@ -93,7 +93,7 @@
 
   <div id="home" class="home-slider">
     <div class="slider-area owl-carousel owl-theme">
-  
+
       <!-- Second slide -->
       <div class="slider-item">
         <img src="assets/img/new/2.png" alt="Ocean Exploration" class="slider-image">
@@ -109,7 +109,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Third slide -->
       <div class="slider-item">
         <img src="assets/img/new/3.png" alt="Submarine Tours" class="slider-image">
@@ -127,13 +127,13 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
   <main class="main">
     <!-- Hero Section -->
-    <section  class="hero section">
+    <section class="hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -592,6 +592,80 @@
     </section>
 
     <!-- /Services Section -->
+
+    <section id="destinations" class="destinations section">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">
+          Explore Global Destinations for Education
+        </h2>
+        <div class="destination-carousel owl-carousel owl-theme">
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>United States</h3>
+              <p>Study in world-renowned universities and explore limitless career opportunities.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>United Kingdom</h3>
+              <p>Experience rich culture and academic excellence with diverse learning programs.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>Canada</h3>
+              <p>Enjoy quality education in a multicultural society with amazing career prospects.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>Australia</h3>
+              <p>Study in a vibrant community while enjoying a fantastic quality of life and work-life balance.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>Germany</h3>
+              <p>Study in top universities and explore a country known for innovation and technology.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>France</h3>
+              <p>Live in a country renowned for its art, culture, and top-tier educational institutions.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>Japan</h3>
+              <p>Discover advanced technologies, a rich cultural heritage, and excellent universities.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>South Korea</h3>
+              <p>Study in a tech-savvy nation with top universities and vibrant cultural experiences.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>Sweden</h3>
+              <p>Experience a progressive education system and a high quality of life in a beautiful country.</p>
+            </div>
+          </div>
+          <div class="destination-item">
+            <div class="destination-info">
+              <h3>Netherlands</h3>
+              <p>Study in an open-minded and innovative environment with a wide range of programs in English.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+
 
     <!-- Faq Section -->
 
@@ -1202,6 +1276,33 @@
     }
 
   </script>
+
+<script>
+  $(document).ready(function () {
+    $(".destination-carousel").owlCarousel({
+      items: 4, // Show 4 items at a time by default
+      loop: true, // Loop through items
+      autoplay: true, // Enable auto-sliding
+      autoplayTimeout: 3000, // Slide every 3 seconds
+      autoplayHoverPause: true, // Pause on hover
+      dots: true, // Show navigation dots
+      nav: false, // Hide prev/next arrows
+      responsive: {
+        0: {
+          items: 1, // 1 item on very small screens
+        },
+        600: {
+          items: 2, // 2 items on small screens
+        },
+        1000: {
+          items: 4, // 4 items on larger screens
+        }
+      }
+    });
+  });
+</script>
+
+
 
   <script>
     $(document).ready(function () {

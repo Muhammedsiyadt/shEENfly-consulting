@@ -2772,3 +2772,95 @@ section,
     font-size: 12px; /* Adjust button font */
   }
 }
+
+
+
+.destinations {
+  padding: 60px 20px;
+  background-color: #f4f6f9;
+}
+
+.destinations .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #0d11fd;
+  margin-bottom: 30px;
+  font-weight: bold;
+  position: relative;
+}
+
+.destinations .section-title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 3px;
+  background: #fd3d0d;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.destination-carousel {
+  margin-top: 20px;
+}
+
+.destination-item {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.destination-info {
+  text-align: center;
+}
+
+.destination-info h3 {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.destination-info p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.destination-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .destination-item {
+    padding: 15px; /* Slightly smaller padding on smaller screens */
+  }
+
+  .destination-info h3 {
+    font-size: 1.2rem; /* Adjusted heading size */
+  }
+
+  .destination-info p {
+    font-size: 0.9rem; /* Adjusted paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .destination-item {
+    padding: 10px; /* Even smaller padding on very small screens */
+  }
+
+  .destination-info h3 {
+    font-size: 1rem; /* Adjusted heading size */
+  }
+
+  .destination-info p {
+    font-size: 0.8rem; /* Adjusted paragraph font size */
+  }
+}
