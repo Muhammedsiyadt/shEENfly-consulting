@@ -1277,31 +1277,30 @@
 
   </script>
 
-<script>
-  $(document).ready(function () {
-    $(".destination-carousel").owlCarousel({
-      items: 4, // Show 4 items at a time by default
-      loop: true, // Loop through items
-      autoplay: true, // Enable auto-sliding
-      autoplayTimeout: 3000, // Slide every 3 seconds
-      autoplayHoverPause: true, // Pause on hover
-      dots: true, // Show navigation dots
-      nav: false, // Hide prev/next arrows
-      responsive: {
-        0: {
-          items: 1, // 1 item on very small screens
-        },
-        600: {
-          items: 2, // 2 items on small screens
-        },
-        1000: {
-          items: 4, // 4 items on larger screens
+  <script>
+    $(document).ready(function () {
+      $(".destination-carousel").owlCarousel({
+        items: 3, // Show 3 items at a time
+        loop: true, // Loop through items
+        autoplay: true, // Enable auto-sliding
+        autoplayTimeout: 3000, // Slide every 3 seconds
+        autoplayHoverPause: true, // Pause on hover
+        dots: true, // Show navigation dots
+        nav: false, // Hide prev/next arrows
+        responsive: {
+          0: {
+            items: 1, // 1 item on very small screens
+          },
+          600: {
+            items: 2, // 2 items on small screens
+          },
+          1000: {
+            items: 3, // 3 items on larger screens
+          }
         }
-      }
+      });
     });
-  });
-</script>
-
+  </script>
 
 
   <script>

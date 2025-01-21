@@ -2777,13 +2777,13 @@ section,
 
 .destinations {
   padding: 60px 20px;
-  background-color: #f4f6f9;
+  background-color: rgba(240, 240, 247, 0.123);
 }
 
 .destinations .section-title {
   font-size: 2.5rem;
   text-align: center;
-  color: #0d11fd;
+  color: var(--heading-color);
   margin-bottom: 30px;
   font-weight: bold;
   position: relative;
@@ -2812,7 +2812,6 @@ section,
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -2833,8 +2832,8 @@ section,
 }
 
 .destination-item:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
+  transition: transform 0.6s ease, box-shadow 0.6s ease, background 0.6s ease; /* Slow down the transition for these properties */
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fd3d0d, #0d83fd) border-box; /* Glowing border effect */
 }
 
 @media (max-width: 768px) {
