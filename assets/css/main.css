@@ -1809,8 +1809,9 @@ section,
 }
 
 .service-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Even softer shadow effect */
-  transform: scale(1.08) rotate(-0.25deg); /* Very subtle scaling and rotation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.336); /* Even softer shadow effect */
+  transform: scale(1.04) rotate(-0.25deg); /* Very subtle scaling and rotation */
+  border: #ff3300 2px solid;
 }
 
 .service-card i {
@@ -1818,11 +1819,11 @@ section,
   color: #0d83fd;
   margin-bottom: 15px;
   transition: color 0.6s ease, transform 0.6s ease; /* Slow down the icon rotation */
+  transform: rotate(360deg); /* Rotate icon slowly */
 }
 
 .service-card:hover i {
   color: #fd3d0d;
-  transform: rotate(360deg); /* Rotate icon slowly */
 }
 
 
