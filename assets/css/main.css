@@ -2582,26 +2582,27 @@ section,
   text-align: center;
   color: #fff;
   padding: 30px 20px; /* Add padding for spacing */
-  background-color: rgba(0, 0, 0, 0.438); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.048); /* Semi-transparent background */
   border-radius: 10px; /* Rounded corners */
   backdrop-filter: blur(10px); /* Optional: adds a blur effect behind the element */
-  max-width: 80%; /* Optional: restricts the width */
+  max-width: 85%; /* Optional: restricts the width */
   margin: 0 auto; /* Centers the content */
 }
 
 .home-slider .slider-item .slider-text h1 {
-  font-size: 60px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
   margin: 0 0 20px 0;
   color: #ff7700;
+  font-family:  var(--heading-font);;
 }
 
 .home-slider .slider-item .slider-text p {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 0;
   margin-bottom: 20px;
   line-height: 1.6;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+  color: #ffffff;
 }
 
 .home-slider .slider-item .slider-text .slider-btn {
