@@ -464,10 +464,12 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: rgba(0, 0, 0, 0.048);
+  background-color: rgba(255, 255, 255, 0.13);
+  border-top: rgba(0, 0, 0, 0.295) 1px solid;
+  margin-top: 10px;
   font-size: 14px;
   position: relative;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .footer .footer-top {
@@ -494,7 +496,9 @@ h6 {
 
 .footer .footer-about p {
   font-size: 14px;
+  font-weight: 500;
   font-family: var(--heading-font);
+  color: black;
 }
 
 .footer .social-links a {
@@ -506,6 +510,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
+  font-weight: 500;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
@@ -550,7 +555,7 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: black;
   display: inline-block;
   line-height: 1;
 }
@@ -2577,7 +2582,7 @@ section,
 
 
 .footitem a{
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: black;
 }
 
 .footitem {
