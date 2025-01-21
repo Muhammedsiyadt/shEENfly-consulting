@@ -77,6 +77,9 @@
             <a href="#services" onclick="smoothScroll(event, '#services')">Services</a>
           </li>
           <li>
+            <a href="#destinations" onclick="smoothScroll(event, '#destinations')">Destinations</a>
+          </li>
+          <li>
             <a href="#faq" onclick="smoothScroll(event, '#faq')">FAQ</a>
           </li>
         </ul>
@@ -88,7 +91,7 @@
   </header>
 
 
-  <div class="home-slider">
+  <div id="home" class="home-slider">
     <div class="slider-area owl-carousel owl-theme">
   
       <!-- Second slide -->
@@ -99,7 +102,7 @@
           <div class="d-table-cell">
             <div class="container">
               <div class="slider-text">
-                <h1 class="text-uppercase">Your Gateway to Global Success</h1>
+                <h1 class="text-uppercase"><strong>Your Gateway to Global Success</strong></h1>
                 <p>Your gateway to global success with expert guidance and complete support.</p>
               </div>
             </div>
@@ -115,7 +118,7 @@
           <div class="d-table-cell">
             <div class="container-fluid">
               <div class="slider-text">
-                <h1>Transforming Dreams into Reality</h1>
+                <h1 class="text-uppercase"><strong>Transforming Dreams into Reality</strong></h1>
                 <p>Empowering students to achieve global success with expert guidance and boundless opportunities.</p>
               </div>
             </div>
@@ -130,7 +133,7 @@
 
   <main class="main">
     <!-- Hero Section -->
-    <section id="home" class="hero section">
+    <section  class="hero section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -312,7 +315,7 @@
     <!-- /Features Section -->
 
     <!-- Features Cards Section -->
-    <section id="features-cards" class="features-cards section">
+    <section id="features-cards" class="features-cards section" style="background-color: #dadada3a;">
       <div class="container">
         <div class="row hello gy-4">
           <!-- Card 1 -->
@@ -593,7 +596,7 @@
     <!-- Faq Section -->
 
     <section id="call-to-action-2" class="call-to-action-2 section dark-background"></section>
-    <section class="faq-9 faq section light-background" id="faq">
+    <section class="faq-9 faq section" id="faq">
       <div class="container">
         <div class="row">
           <div class="col-lg-5" data-aos="fade-up">
@@ -699,7 +702,7 @@
     <!-- /Call To Action 2 Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
+    <section id="contact" class="contact section ">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
@@ -1057,6 +1060,20 @@
     </a>
 
   </div>
+
+
+  <script>
+    function smoothScroll(event, targetId) {
+      event.preventDefault(); // Prevent the default anchor behavior
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // Offset to account for fixed navbar
+          behavior: "smooth",
+        });
+      }
+    }
+  </script>
 
 
 

@@ -464,9 +464,10 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: rgba(0, 0, 0, 0.048);
   font-size: 14px;
   position: relative;
+  padding-bottom: 5px;
 }
 
 .footer .footer-top {
@@ -1150,6 +1151,11 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+
+.why-choose-us{
+
+  background-color: #dadada3a;
+}
 .why-choose-us .section-title h2 {
   font-size: 36px;
   font-weight: bold;
@@ -1319,7 +1325,17 @@ section,
   height: 100%;
   padding: 40px 30px;
   border-radius: 10px;
+  background-color: #ffffff; /* Ensures a clean, consistent background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
+
+.features-cards .feature-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  transform: translateY(-10px); /* Adds a lift effect */
+  background-color: #f9f9f9; /* Slightly different background for hover */
+}
+
 
 .features-cards .feature-box i {
   font-size: 44px;
@@ -1765,17 +1781,74 @@ section,
 # Services Section
 --------------------------------------------------------------*//* Services Section */
 /* Services Section */
-.services {
-  padding: 60px 0;
+.services{
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.062);
+}
+.service-card {
   background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.199);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for box-shadow and transform */
+  height: 100%;
+  min-height: 230px; /* Ensures consistent card size */
+  overflow: hidden; /* Ensures child effects are contained */
+  position: relative;
+}
+
+.service-card{
+  border: 1px solid transparent;
+  transition: transform 0.6s ease, box-shadow 0.6s ease, background 0.6s ease; /* Slow down the transition for these properties */
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fd3d0d, #0d83fd) border-box; /* Glowing border effect */
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Even softer shadow effect */
+  transform: scale(1.08) rotate(-0.25deg); /* Very subtle scaling and rotation */
+}
+
+.service-card i {
+  font-size: 2rem;
+  color: #0d83fd;
+  margin-bottom: 15px;
+  transition: color 0.6s ease, transform 0.6s ease; /* Slow down the icon rotation */
+}
+
+.service-card:hover i {
+  color: #fd3d0d;
+  transform: rotate(360deg); /* Rotate icon slowly */
+}
+
+
+.service-card h3 {
+  font-size: 1.3rem;
+  color: #fd3d0d;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 .services .section-title {
   font-size: 2.5rem;
   text-align: center;
-  color: #0d83fd;
+  color: var(--heading-color);
   margin-bottom: 30px;
   font-weight: bold;
+  position: relative;
+  opacity: 0; /* Start with opacity 0 */
+  transform: translateY(20px); /* Start with a slight bottom offset */
+  animation: slideIn 0.6s ease-out forwards; /* Animation applied here */
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
 }
 
 .services .section-title:after {
@@ -1790,62 +1863,67 @@ section,
   bottom: 0;
   margin: auto;
   margin-bottom: 10px;
+  opacity: 0;
+  animation: underlineAnimation 0.6s ease-out forwards; /* Animate underline */
 }
 
-/* Small Service Cards */
-.service-card {
-  background-color: #ffffff;
-  border: 2px solid #ddd;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for box-shadow and transform */
-  height: 100%;
-  min-height: 230px; /* Ensures the cards have a consistent size */
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 250px;
+    opacity: 1;
+  }
 }
 
-.service-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.514); /* Enhanced shadow effect on hover */
-  transform: translateY(-5px); /* Slightly lift the card on hover for better interaction */
+@media (max-width: 768px) {
+  .services .section-title {
+    font-size: 2rem;
+  }
+
+  .services .section-title:after {
+    width: 150px; /* Smaller underline for mobile view */
+  }
 }
 
 
-.service-card i {
-  font-size: 2rem;
+.service-card:hover h3 {
   color: #0d83fd;
-  margin-bottom: 15px;
-}
-
-.service-card:hover i {
-  color: #fd3d0d;
-}
-
-.service-card h3 {
-  font-size: 1.3rem;
-  color: #fd3d0d;
-  margin-bottom: 10px;
 }
 
 .service-card p {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
-}
-
-.service-card:hover h3 {
-  color: #0d83fd;
+  transition: color 0.3s ease;
 }
 
 .service-card:hover p {
   color: #333;
 }
 
+/* Glow Effect for Hover */
+.service-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: -1; /* Places it behind the content */
+}
+
+.service-card:hover:before {
+  opacity: 1;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .services .section-title {
-    font-size: 2rem;
-  }
-
   .service-card {
     padding: 15px;
   }
@@ -1862,6 +1940,7 @@ section,
     font-size: 0.85rem;
   }
 }
+
 
 
 
@@ -2007,6 +2086,9 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+.faq{
+  background-color: #0b99f113;
+}
 .faq .faq-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -2145,6 +2227,7 @@ section,
 --------------------------------------------------------------*/
 .contact .info-box {
   background-color: var(--accent-color);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.151);
   color: var(--contrast-color);
   padding: 3rem;
   border-radius: 1rem;
@@ -2230,7 +2313,7 @@ section,
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.151);
 }
 
 @media (max-width: 992px) {
@@ -2585,24 +2668,24 @@ section,
   background-color: rgba(255, 255, 255, 0.048); /* Semi-transparent background */
   border-radius: 10px; /* Rounded corners */
   backdrop-filter: blur(10px); /* Optional: adds a blur effect behind the element */
-  max-width: 85%; /* Optional: restricts the width */
-  margin: 0 auto; /* Centers the content */
+  max-width: 85%; 
+  margin: 0 auto; 
 }
 
 .home-slider .slider-item .slider-text h1 {
   font-size: 30px;
-  font-weight: 900;
+  font-family: sans-serif;
   margin: 0 0 20px 0;
-  color: #ff7700;
-  font-family:  var(--heading-font);;
+  color: #ff5e00;
+  
 }
 
 .home-slider .slider-item .slider-text p {
-  font-size: 20px;
+  font-size: 17px;
   margin-top: 0;
   margin-bottom: 20px;
   line-height: 1.6;
-  color: #ffffff;
+  color: #002fff;
 }
 
 .home-slider .slider-item .slider-text .slider-btn {
@@ -2632,11 +2715,11 @@ section,
   }
 
   .home-slider .slider-item .slider-text h1 {
-    font-size: 50px; /* Smaller font size on medium screens */
+    font-size: 20px; /* Smaller font size on medium screens */
   }
 
   .home-slider .slider-item .slider-text p {
-    font-size: 16px; /* Adjust paragraph font size */
+    font-size: 13px; /* Adjust paragraph font size */
   }
 
   .home-slider .slider-item .slider-text .slider-btn {
