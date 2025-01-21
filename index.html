@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ShHEENfly</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo.ico" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Owl Carousel Theme CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- =======================================================
+  * Template Name: iLanding
+  * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
+  * Updated: Nov 12 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="#home" onclick="smoothScroll(event, '#home')" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/sheen.png" alt="" />
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#home" class="active" onclick="smoothScroll(event, '#home')">Home</a>
+          </li>
+          <li>
+            <a href="#about" onclick="smoothScroll(event, '#about')">About</a>
+          </li>
+          <li>
+            <a href="#why-choose-us" onclick="smoothScroll(event, '#why-choose-us')">Why us</a>
+          </li>
+          <li>
+            <a href="#services" onclick="smoothScroll(event, '#services')">Services</a>
+          </li>
+          <li>
+            <a href="#faq" onclick="smoothScroll(event, '#faq')">FAQ</a>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#contact" onclick="smoothScroll(event, '#contact')">Contact</a>
+    </div>
+  </header>
+
+
+  <div class="home-slider">
+    <div class="slider-area owl-carousel owl-theme">
+      <!-- First slide -->
+      <div class="slider-item">
+        <img src="assets/img/new/1.png" alt="Underwater Diving" class="slider-image">
+        <div class="slider-overlay"></div>
+        <div class="d-table">
+          <div class="d-table-cell">
+            <div class="container">
+              <div class="slider-text">
+                <h1>UNDERWATER DIVING SERVICES</h1>
+                <p>We undertake a wide range of underwater services, delivering expert solutions tailored to diverse client needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Second slide -->
+      <div class="slider-item">
+        <img src="assets/img/new/2.png" alt="Ocean Exploration" class="slider-image">
+        <div class="slider-overlay"></div>
+        <div class="d-table">
+          <div class="d-table-cell">
+            <div class="container">
+              <div class="slider-text">
+                <h1>OCEAN EXPLORATION SERVICES</h1>
+                <p>Our team of skilled professionals is dedicated to providing safe and efficient ocean exploration services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Third slide -->
+      <div class="slider-item">
+        <img src="assets/img/new/3.png" alt="Submarine Tours" class="slider-image">
+        <div class="slider-overlay"></div>
+        <div class="d-table">
+          <div class="d-table-cell">
+            <div class="container-fluid">
+              <div class="slider-text">
+                <h1>SUBMARINE TOURS</h1>
+                <p>Dive into the depths of the ocean with our exclusive submarine tours, offering a unique perspective of marine life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <h1 class="mb-4">
+                Experience a World of Opportunities with <br />
+                <span class="accent-text">ShEEN<span style="color: #0d83fd">fly</span></span>
+              </h1>
+              <p class="mb-4 mb-md-5">
+                At Sheenfly, we are dedicated to empowering students with
+                opportunities to achieve their dreams of international
+                education and success.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="#about" onclick="smoothScroll(event, '#about')" class="btn btn-primary me-0 me-sm-2 mx-1">Learn
+                  More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 align-items-center justify-content-between">
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta">ABOUT </span>
+            <h2 class="about-title">
+              Empowering Dreams, One Opportunity at a Time with
+              <span style="color: #fd3d0d">ShEEN</span><span style="color: #0d83fd">fly</span>
+            </h2>
+            <p class="about-description">
+              At Sheenfly, we are committed to providing students with
+              exceptional opportunities to succeed on an international
+              platform. With our comprehensive support, we ensure that
+              deserving individuals can access quality education and achieve
+              their dreams without any barriers.
+            </p>
+
+            <div class="row feature-list-wrapper">
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Passionate About
+                    Social Impact
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Connecting You
+                    Globally
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> A Complete
+                    Education Ecosystem
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Expert
+                    Consultation, Always Free
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> End-to-End
+                    Immigration Guidance
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Building Trust
+                    with Every Step
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="" data-aos="fade-up" data-aos-delay="300"></div>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <img src="assets/img/ab1.jpg" alt="Empowering Students" class="img-fluid main-image rounded-4" />
+                <img src="assets/img/about-5.webp" alt="Guidance and Support" class="img-fluid small-image rounded-4" />
+              </div>
+              <div class="experience-badge floating">
+                <h3>3+ <span>Years</span></h3>
+                <p>Of transforming lives through education</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="why-choose-us" class="why-choose-us section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Why Choose <span style="color: #fd3d0d">ShEEN</span><span style="color: #0d83fd">fly</span>?</h2>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+            <ul>
+              <li>
+                <p class="number-square">01</p>
+                <span>
+                  <h5>
+                    <strong>Social Commitment at the Core <br /></strong>
+                  </h5>
+                  We aim to empower students with quality education and global
+                  opportunities.
+                </span>
+              </li>
+              <li>
+                <p class="number-square">02</p>
+                <span>
+                  <h5>
+                    <strong>Extensive Global Network <br /></strong>
+                  </h5>
+                  We have a global network that connects students to top
+                  institutions and opportunities.
+                </span>
+              </li>
+              <li>
+                <p class="number-square">03</p>
+                <span>
+                  <h5>
+                    <strong>Holistic Approach to Education <br /></strong>
+                  </h5>
+                  We provide complete support, including immigration and
+                  language training, to help you succeed abroad.
+                </span>
+              </li>
+              <li>
+                <p class="number-square">04</p>
+                <span>
+                  <h5>
+                    <strong>No Consultation Charges <br /></strong>
+                  </h5>
+                  At Sheenfly, we offer free consulting services to ensure
+                  financial constraints don't hinder your study abroad
+                  dreams.
+                </span>
+              </li>
+              <li>
+                <p class="number-square">05</p>
+                <span>
+                  <h5>
+                    <strong>Unparalleled Integrity <br /></strong>
+                  </h5>
+                  Trust is key at Sheenfly; we uphold integrity, transparency,
+                  and ethical practices throughout the journey.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="assets/img/about-5.webp" alt="Why Choose Us" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Features Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+      <div class="container">
+        <div class="row hello gy-4">
+          <!-- Card 1 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box orange">
+              <i class="bi bi-briefcase-fill"></i>
+              <!-- Icon: Briefcase for global education access -->
+              <h4>Global Education Access</h4>
+              <p>
+                We bridge the gap between aspiring students and the best
+                educational institutions worldwide, empowering them to pursue
+                their dreams without borders.
+              </p>
+            </div>
+          </div>
+          <!-- End Card 1 -->
+
+          <!-- Card 2 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box blue">
+              <i class="bi bi-people-fill"></i>
+              <!-- Icon: People for worldwide network -->
+              <h4>Worldwide Network</h4>
+              <p>
+                Our extensive network of global partners ensures you have
+                access to the most trusted pathways to success, no matter
+                where you’re headed.
+              </p>
+            </div>
+          </div>
+          <!-- End Card 2 -->
+
+          <!-- Card 3 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box green">
+              <i class="bi bi-person-check-fill"></i>
+              <!-- Icon: Person check for comprehensive support -->
+              <h4>Comprehensive Support</h4>
+              <p>
+                From application guidance to visa support and language
+                training, we provide end-to-end services to make your
+                transition smooth and successful.
+              </p>
+            </div>
+          </div>
+          <!-- End Card 3 -->
+
+          <!-- Card 4 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box red">
+              <i class="bi bi-heart-fill"></i>
+              <!-- Icon: Heart for free consultation (symbolizing care and support) -->
+              <h4>Free Consultation</h4>
+              <p>
+                Education is a right, not a privilege. We offer our expert
+                consulting services absolutely free of charge, ensuring
+                everyone can achieve their academic aspirations.
+              </p>
+            </div>
+          </div>
+          <!-- End Card 4 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- /Features Cards Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row content justify-content-center align-items-center position-relative">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 mb-4">
+              Take the First Step Towards Your Dream Education!
+            </h2>
+            <p class="mb-4">
+              At Sheenfly, we're committed to helping you achieve your
+              academic goals by providing personalized guidance for studying
+              abroad. Let's start your journey today!
+            </p>
+
+            <!-- Call to Action Buttons -->
+            <!-- Call Button -->
+            <a href="tel:+917907487289" class="btn btn-cta mt-3">
+              <i class="bi bi-telephone-fill"></i>
+            </a>
+
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/917907487289" class="btn btn-cta whatsapp-btn mt-3">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+
+            <!-- <a href="tel:+919061144860" class="btn btn-cta mt-3"
+                >Call Us: +91 9061144860</a
+              >
+              <a href="https://wa.me/919061144860" class="btn btn-cta mt-3"
+                >WhatsApp Us: +91 9061144860</a
+              > -->
+          </div>
+
+          <!-- Abstract Background Elements -->
+          <div class="shape shape-1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z"
+                transform="translate(100 100)"></path>
+            </svg>
+          </div>
+
+          <div class="shape shape-2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z"
+                transform="translate(100 100)"></path>
+            </svg>
+          </div>
+
+          <!-- Dot Pattern Groups -->
+          <div class="dots dots-1">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+            </svg>
+          </div>
+
+          <div class="dots dots-2">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
+            </svg>
+          </div>
+
+          <div class="shape shape-3">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z"
+                transform="translate(100 100)"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Call To Action Section -->
+
+    <!-- Stats Section -->
+    <!-- <section id="stats" class="stats section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="232"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Clients</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="521"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Projects</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="1453"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item text-center w-100 h-100">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="32"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Workers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    <!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title text-center mb-4">
+          Our Comprehensive Services
+        </h2>
+        <div class="row">
+          <!-- Service Cards -->
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="service-card">
+              <i class="bi bi-person-lines-fill service-icon"></i>
+              <h3><strong>Study Abroad Guidance and Support</strong></h3>
+              <p>
+                Our experienced consultants will guide you in choosing the
+                right course and institution, assisting you from application
+                submission to securing scholarships.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="service-card">
+              <i class="bi bi-clipboard-check service-icon"></i>
+              <h3><strong>Scholarship Assistance</strong></h3>
+              <p>
+                Sheenfly assists in identifying and applying for scholarships,
+                grants, and financial aid, maximizing your chances of funding
+                your education.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="service-card">
+              <i class="bi bi-card-checklist service-icon"></i>
+              <h3><strong>Visa Support</strong></h3>
+              <p>
+                Our experts provide guidance on visa applications, interview
+                preparation, and document management to ensure a smooth visa
+                process.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="service-card">
+              <i class="bi bi-person-fill-lock service-icon"></i>
+              <h3><strong>Immigration Services</strong></h3>
+              <p>
+                We offer personalized assistance with visa applications,
+                residency permits, and other necessary documentation for a
+                hassle-free immigration process.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="service-card">
+              <i class="bi bi-brush service-icon"></i>
+              <h3><strong>Language Training</strong></h3>
+              <p>
+                We provide language training programs including IELTS and
+                German to help you succeed in academic and professional
+                pursuits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Services Section -->
+
+    <!-- Faq Section -->
+
+    <section id="call-to-action-2" class="call-to-action-2 section dark-background"></section>
+    <section class="faq-9 faq section light-background" id="faq">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5" data-aos="fade-up">
+            <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+            <p class="faq-description">
+              If you have any questions regarding our services, feel free to
+              browse through the frequently asked questions. We're here to
+              help you every step of the way.
+            </p>
+            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3>What services do you provide for studying abroad?</h3>
+                <div class="faq-content">
+                  <p>
+                    We assist students with every step of their journey
+                    abroad, from course and university selection, application
+                    submissions, scholarship opportunities, visa support,
+                    language training, and immigration services.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>How can I apply for a scholarship?</h3>
+                <div class="faq-content">
+                  <p>
+                    Our team will guide you in identifying scholarship
+                    opportunities based on your academic profile and help with
+                    the application process to maximize your chances of
+                    success.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>Do you provide visa assistance?</h3>
+                <div class="faq-content">
+                  <p>
+                    Yes, we provide comprehensive visa assistance, including
+                    document preparation and interview guidance to ensure a
+                    smooth visa application process.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+              <div class="faq-item">
+                <h3>What language training programs do you offer?</h3>
+                <div class="faq-content">
+                  <p>
+                    We offer language courses such as IELTS and German to
+                    ensure you're well-prepared for your studies and to meet
+                    the language requirements of your destination country.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Faq Section -->
+
+    <!-- Call To Action 2 Section -->
+    <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+      <!-- <div class="container">
+          <div
+            class="row justify-content-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="col-xl-10">
+              <div class="text-center">
+                <h3>Call To Action</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum.
+                </p>
+                <a class="cta-btn" href="#">Call To Action</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </section>
+    <!-- /Call To Action 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out to us for any inquiries, feedback, or
+          assistance. We're here to help!
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+              <p>
+                We are committed to providing the best support for your needs.
+                Our team is always ready to assist you with any queries or
+                concerns.
+              </p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p>ShEEN International</p>
+                  <p>Vellamunda 7/4, Kattayad (PO)</p>
+                  <p>Wayanad, Kerala - 670731</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Number</h4>
+                  <p><a href="tel:+919400995949">+91 9400 9959 49 (India)</a></p>
+                  <p><a href="tel:+917907487289">+91 7907 4872 89 (India)</a></p>
+                  <p><a href="tel:+19022330645">+1 902 233-0645 (Canada)</a></p>
+                  <p><a href="tel:+4915560693596">+49 1556 0693 596 (Germany)</a></p>
+                </div>
+
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+                  <p>sheenflyletsflyyou@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get In Touch</h3>
+              <p>
+                We are here to assist you with any questions or concerns.
+                Don't hesitate to get in touch with us!
+              </p>
+
+              <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form   " data-aos="fade-up"
+                data-aos-delay="200" onsubmit="return validateForm()">
+                <!-- Required Web3Forms access key -->
+                <input type="hidden" name="access_key" value="0510654d-ca5e-4f1a-bf6f-8a93272a34cd">
+
+                <div class="row gy-4">
+                  <!-- Name Input -->
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-person"></i></span>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required
+                        minlength="3" pattern="^[^\s]+(?:\s+[^\s]+)*$"
+                        title="Name cannot have leading or trailing spaces" />
+                    </div>
+                  </div>
+
+                  <!-- Email Input -->
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                      <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" />
+                    </div>
+                  </div>
+
+                  <!-- Phone Input -->
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                      <input type="tel" name="phone" id="phone" class="form-control" placeholder="Your Phone Number"
+                        required pattern="^[0-9]{10}$" title="Please enter a valid 10-digit phone number" />
+                    </div>
+                  </div>
+
+                  <!-- Subject Input -->
+                  <!-- <div class="col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-chat-square-text"></i></span>
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject"
+                        class="form-control"
+                        placeholder="Subject"
+                        required
+                        minlength="5"
+                        pattern="^[^\s]+(?:\s+[^\s]+)*$"
+                        title="Subject cannot have leading or trailing spaces"
+                      />
+                    </div>
+                  </div> -->
+
+                  <!-- Admission Type Dropdown -->
+                  <div class="col-md-6">
+                    <select name="admissionType" id="admissionType" class="form-select"
+                      onchange="handleAdmissionTypeChange()" required>
+                      <option value="" disabled selected>Select Purpose</option>
+                      <option value="Study Abroad">Study Abroad</option>
+                      <option value="Domestic Admission">Domestic Admission</option>
+                      <option value="Short Term Course">Short Term Course</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <!-- Conditional Fields -->
+                  <!-- Study Abroad Fields -->
+                  <div id="studyAbroadFields" style="display: none;">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-journal"></i></span>
+                      <input type="text" name="currentStudy" id="currentStudy" class="form-control"
+                        placeholder="Current Course of Study" />
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-globe"></i></span>
+                      <input type="text" name="preferredCountry" id="preferredCountry" class="form-control"
+                        placeholder="Preferred Country" />
+                    </div>
+                  </div>
+
+                  <!-- Domestic Admission Fields -->
+                  <div id="domesticAdmissionFields" style="display: none;">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-house"></i></span>
+                      <input type="text" name="domesticCourse" id="domesticCourse" class="form-control"
+                        placeholder="Course Interested In" />
+                    </div>
+                    <select name="studyLevel" id="studyLevel" class="form-select">
+                      <option value="" disabled selected>Select Study Level</option>
+                      <option value="Undergraduate">Undergraduate</option>
+                      <option value="Postgraduate">Postgraduate</option>
+                      <option value="Diploma">Diploma</option>
+                    </select>
+                  </div>
+
+                  <!-- Short Term Course Fields -->
+                  <div id="shortTermFields" style="display: none;">
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-calendar-check"></i></span>
+                      <input type="text" name="shortTermCourse" id="shortTermCourse" class="form-control"
+                        placeholder="Course Name" />
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                      <input type="text" name="duration" id="duration" class="form-control"
+                        placeholder="Duration (e.g., 3 Months)" />
+                    </div>
+                  </div>
+
+
+                  <!-- Message -->
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" required
+                      minlength="10"></textarea>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                  </div>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6 footer-about  text-start">
+          <a href="#home" onclick="smoothScroll(event, '#home')" class="logo d-flex align-items-center">
+            <span class="sitename"><span style="color: #fd3d0d">ShEEN</span><span
+                style="color: #0d83fd">fly</span></span>
+          </a>
+          <p>
+            At Sheenfly, we are committed to providing students with exceptional opportunities to succeed on an
+            international platform. With our comprehensive support, we ensure that deserving individuals can access
+            quality education and achieve their dreams without any barriers.
+          </p>
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links text-start">
+          <h4>Address</h4>
+          <div class="footer-contact text-start">
+            <p class="footitem">ShEEN International</p>
+            <p>
+              <i class="bi bi-geo-alt-fill"></i> Vellamunda 7/4, Kattayad (PO), Wayanad, Kerala 670731
+            </p>
+            <p class="footitem">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+919400995949">+91 9400 9959 49 (India)</a>
+            </p><br>
+            <p class="footitem">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+917907487289">+91 7907 4872 89 (India)</a>
+            </p><br>
+            <p class="footitem">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+19022330645">+1 902 233-0645 (Canada)</a>
+            </p><br>
+            <p class="footitem">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+4915560693596">+49 1556 0693 596 (German)</a>
+            </p>
+
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links text-start">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
+                <i class="bi bi-globe footitem"></i> Study Abroad Guidance and Support
+              </a></li>
+            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
+                <i class="bi bi-award footitem"></i> Scholarship Assistance
+              </a></li>
+            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
+                <i class="bi bi-pass-fill footitem"></i> Visa Support
+              </a></li>
+            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
+                <i class="bi bi-people-fill footitem"></i> Immigration Services
+              </a></li>
+            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
+                <i class="bi bi-translate footitem"></i> Language Training
+              </a></li>
+          </ul>
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links  text-start">
+          <h4>Global Education Access</h4>
+          <ul>
+            <li>
+              <a class="footitem">
+                <i class="bi bi-mortarboard-fill footitem"></i> Global Education Access
+              </a>
+            </li>
+            <li>
+              <a class="footitem">
+                <i class="bi bi-globe footitem"></i> Worldwide Network
+              </a>
+            </li>
+            <li>
+              <a class="footitem">
+                <i class="bi bi-gear-fill footitem"></i> Comprehensive Support
+              </a>
+            </li>
+            <li>
+              <a class="footitem">
+                <i class="bi bi-chat-left-dots-fill "></i> Free Consultation
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="social-links d-flex mt-2 text-center justify-content-center">
+      <a href="https://chat.whatsapp.com/IKipgDBK5BvIIi7wIkdSZB"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.instagram.com/sheen_fly/"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.youtube.com/@sheenfly"><i class="bi bi-youtube"></i></a>
+      <a><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <div class="container text-center mt-4 mb-4">
+      <p class="copyright-text d-flex justify-content-center align-items-center">
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">
+          <span style="color: #fd3d0d; font-weight: bold;">ShEEN</span>
+          <span style="color: #0d83fd; font-weight: bold;">fly</span>
+        </strong>
+        <span>All Rights Reserved</span>
+      </p>
+
+      <div class="credits d-flex justify-content-center align-items-center mb-2">
+        <span>Developed by &nbsp;</span>
+        <a href="https://www.linkedin.com/in/muhammedsiyadt/" target="_blank"
+          style="color: #0d83fd; font-weight: bold;"> Muhammed Siyad</a>
+        <span class="mx-3">|</span>
+        <div class="social-icons">
+          <a href="tel:+917558001145" target="_blank" class="me-3" style="color: #fd3d0d;">
+            <i class="bi bi-telephone-fill"></i>
+          </a>
+          <a href="https://wa.me/917558001145" target="_blank" class="me-3" style="color: #25D366;">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammedsiyadt/" target="_blank" class="me-3" style="color: #0d83fd;">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/siyad___._10/" target="_blank" class="me-3" style="color: #C13584;">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    </a>
+    </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div class="floating-icons">
+    <a href="https://chat.whatsapp.com/IKipgDBK5BvIIi7wIkdSZB" target="_blank" class="whatsapp-icon"
+      title="Chat on WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="tel:+917907487289" target="_blank" class="call-icon" title="Call Now">
+      <i class="bi bi-telephone-fill"></i>
+    </a>
+
+  </div>
+
+
+
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1, // Show one slide at a time
+        loop: true, // Enable looping of slides
+        autoplay: true, // Enable autoplay of the slides
+        autoplayTimeout: 5000, // Set the autoplay interval (5 seconds)
+        autoplayHoverPause: true, // Pause autoplay on hover
+        dots: true, // Show navigation dots
+        nav: false, // Disable navigation arrows
+      });
+    });
+
+  </script>
+
+  <script>
+    function handleAdmissionTypeChange() {
+      const type = document.getElementById("admissionType").value;
+
+      document.getElementById("studyAbroadFields").style.display =
+        type === "Study Abroad" ? "flex" : "none";
+      document.getElementById("domesticAdmissionFields").style.display =
+        type === "Domestic Admission" ? "flex" : "none";
+      document.getElementById("shortTermFields").style.display =
+        type === "Short Term Course" ? "flex" : "none";
+    }
+  </script>
+
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const admissionType = document.getElementById('admissionType').value;
+      const message = document.getElementById('message').value.trim();
+
+      // Reset error messages
+      hideAllMessages();
+
+      // Validate name
+      if (name.length < 3 || /^\s|\s$/.test(name)) {
+        showError('Name must be at least 3 characters and cannot have leading/trailing spaces');
+        return false;
+      }
+
+      // Validate email
+      if (!isValidEmail(email)) {
+        showError('Please enter a valid email address');
+        return false;
+      }
+
+      // Validate phone
+      if (!isValidPhone(phone)) {
+        showError('Please enter a valid 10-digit phone number');
+        return false;
+      }
+
+      // Validate admission type
+      if (!admissionType) {
+        showError('Please select a purpose');
+        return false;
+      }
+
+      // Validate message
+      if (message.length < 10) {
+        showError('Message must be at least 10 characters');
+        return false;
+      }
+
+      // Show loading message
+      document.querySelector('.loading').style.display = 'block';
+
+      // Submit form using fetch
+      submitForm();
+      return false;
+    }
+
+    function isValidEmail(email) {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return emailRegex.test(email);
+    }
+
+    function isValidPhone(phone) {
+      const phoneRegex = /^[0-9]{10}$/;
+      return phoneRegex.test(phone);
+    }
+
+    function hideAllMessages() {
+      document.querySelector('.loading').style.display = 'none';
+      document.querySelector('.error-message').style.display = 'none';
+      document.querySelector('.sent-message').style.display = 'none';
+    }
+
+    function showError(message) {
+      const errorDiv = document.querySelector('.error-message');
+      errorDiv.textContent = message;
+      errorDiv.style.display = 'block';
+    }
+
+    function submitForm() {
+      const form = document.querySelector('.php-email-form');
+      const formData = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          hideAllMessages();
+          if (data.success) {
+            document.querySelector('.sent-message').style.display = 'block';
+            form.reset();
+          } else {
+            showError(data.message || 'An error occurred. Please try again.');
+          }
+        })
+        .catch(error => {
+          hideAllMessages();
+          showError('An error occurred. Please try again.');
+        });
+    }
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1, // Number of slides to show
+        loop: true, // Enable looping
+        autoplay: true, // Autoplay the slider
+        autoplayTimeout: 4000, // Autoplay interval (5 seconds)
+        autoplayHoverPause: true, // Pause autoplay on hover
+        dots: true, // Show dots navigation
+        nav: false, // Disable navigation arrows
+      });
+    });
+
+
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
