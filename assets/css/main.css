@@ -630,13 +630,14 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-image: url(../img/ab1.jpg);
   padding: 170px 0 80px 0;
   text-align: center;
   position: relative;
 }
 
 .page-title h1 {
+  color: var(--heading-color);
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -2506,7 +2507,6 @@ section,
 }
 
 .service-details ul li {
-  padding: 5px 0;
   display: flex;
   align-items: center;
 }
@@ -2861,5 +2861,89 @@ section,
 
   .destination-info p {
     font-size: 0.8rem; /* Adjusted paragraph font size */
+  }
+}
+
+
+
+.dests-global-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.dests-continent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.dests-continent-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.dests-continent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.dests-continent-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.dests-continent-icon {
+  font-size: 2.5em;
+  margin-right: 15px;
+  opacity: 0.8;
+}
+
+.dests-continent-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+.dests-destination-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.dests-destination-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.dests-destination-item:hover {
+  background-color: #e9f5ff;
+  transform: translateX(5px);
+}
+
+.dests-destination-item i {
+  margin-right: 10px;
+  color: #4CAF50;
+}
+
+@media (max-width: 1024px) {
+  .dests-continent-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dests-continent-grid {
+      grid-template-columns: 1fr;
   }
 }
