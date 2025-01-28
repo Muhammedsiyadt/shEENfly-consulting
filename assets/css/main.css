@@ -2880,7 +2880,7 @@ section,
 
 .dests-continent-card {
   background-color: white;
-  border-radius: 15px;
+  border-radius: 15px; 
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   padding: 20px;
   transition: all 0.3s ease;
