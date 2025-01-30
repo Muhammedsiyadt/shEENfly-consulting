@@ -81,9 +81,13 @@
 
     /* Hover Effects */
     .destination-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 12px 0 20px rgba(0, 123, 255, 0.7), -12px 0 20px rgba(255, 94, 0, 0.9);
-    }
+            transform: translateY(-3px);
+            box-shadow:
+                2px 2px 2px rgba(0, 123, 255, 0.7),
+                /* Slightly stronger blue shadow */
+                -2px -2px 2px rgba(255, 94, 0, 0.8);
+            /* Slightly stronger orange shadow */
+        }
     .destination-card:hover img {
       transform: scale(1.05);
     }
