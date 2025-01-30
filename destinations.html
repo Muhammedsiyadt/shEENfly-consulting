@@ -1,345 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>ShEENfly</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Abroad Destinations</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .destination-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      height: 100%;
+    }
+    .destination-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      padding: 15px;
+    }
+    .destination-card .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+    .destination-card h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #0d83fd; /* Your blue color */
+    }
+    .destination-card p {
+      font-size: 0.8rem;
+      color: #666;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/Logo.ico" rel="icon" />
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    /* Hover Effects */
+    .destination-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(13, 131, 253, 0.2); /* Blue shadow */
+    }
+    .destination-card:hover img {
+      transform: scale(1.05);
+    }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- Owl Carousel Theme CSS -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
-  <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet" />
+    /* Brand color overlays */
+    .destination-card::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(45deg, rgba(255, 94, 0, 0.1), rgba(0, 123, 255, 0.1));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .destination-card:hover::before {
+      opacity: 1;
+    }
+  </style>
 </head>
-
-<body class="index-page">
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/sheen.png" alt="" />
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="index.html">About</a>
-          </li>
-          <li>
-            <a href="index.html">Why us</a>
-          </li>
-          <li>
-            <a href="index.html">Services</a>
-          </li>
-          <li>
-            <a class="active">Destinations</a>
-          </li>
-          <li>
-            <a href="index.html">FAQ</a>
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html">Contact</a>
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container">
-        <h1 class="dest-title">Our Destinations</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Destinations</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <div class="container">
-
-      <div class="dests-global-container">
-        <div class="dests-continent-grid">
-            <div class="dests-continent-card">
-                <div class="dests-continent-header">
-                    <span class="dests-continent-icon">🇪🇺</span>
-                    <div class="dests-continent-title">European Education Hub</div>
-                </div>
-                <div class="dests-destination-list">
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>France</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>UK</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Germany</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Spain</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Ireland</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Poland</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Malta</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Czech Republic</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Lithuania</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Latvia</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Finland</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Denmark</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Sweden</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Austria</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Slovenia</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Slovakia</div>
-                </div>
-            </div>
-
-            <div class="dests-continent-card">
-                <div class="dests-continent-header">
-                    <span class="dests-continent-icon">🇺🇸</span>
-                    <div class="dests-continent-title">North American Opportunities</div>
-                </div>
-                <div class="dests-destination-list">
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Canada</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>USA</div>
-                </div>
-            </div>
-
-            <div class="dests-continent-card">
-                <div class="dests-continent-header">
-                    <span class="dests-continent-icon">🌏</span>
-                    <div class="dests-continent-title">Asian & Oceanian Learning Centers</div>
-                </div>
-                <div class="dests-destination-list">
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Singapore</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Australia</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>New Zealand</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Malaysia</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Georgia</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Kazakhstan</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Kyrgyzstan</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Uzbekistan</div>
-                </div>
-            </div>
-
-            <div class="dests-continent-card">
-                <div class="dests-continent-header">
-                    <span class="dests-continent-icon">🌍</span>
-                    <div class="dests-continent-title">African Education Destinations</div>
-                </div>
-                <div class="dests-destination-list">
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Mauritius</div>
-                    <div class="dests-destination-item"><i class="bi bi-check-circle"></i>Egypt</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-3 col-md-6 footer-about  text-start">
-          <a href="#home" onclick="smoothScroll(event, '#home')" class="logo d-flex align-items-center">
-            <span class="sitename"><span style="color: #fd3d0d">ShEEN</span><span
-                style="color: #0d83fd">fly</span></span>
-          </a>
-          <p>
-            At Sheenfly, we are committed to providing students with exceptional opportunities to succeed on an
-            international platform. With our comprehensive support, we ensure that deserving individuals can access
-            quality education and achieve their dreams without any barriers.
-          </p>
-
-        </div>
-
-        <div class="col-lg-3 col-md-3 footer-links text-start">
-          <h4>Address</h4>
-          <div class="footer-contact text-start">
-            <p class="footitem">ShEEN International</p>
-            <p>
-              <i class="bi bi-geo-alt-fill"></i> Vellamunda 7/4, Kattayad (PO), Wayanad, Kerala 670731
-            </p>
-            <p class="footitem">
-              <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+919400995949">+91 9400 9959 49 (India)</a>
-            </p><br>
-            <p class="footitem">
-              <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+917907487289">+91 7907 4872 89 (India)</a>
-            </p><br>
-            <p class="footitem">
-              <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+19022330645">+1 902 233-0645 (Canada)</a>
-            </p><br>
-            <p class="footitem">
-              <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+4915560693596">+49 1556 0693 596 (German)</a>
-            </p>
-
-
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-5" style="color: #0d83fd;">Study Abroad Destinations</h1>
+    <div class="row g-4">
+      <!-- France -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/france (1).png" alt="France">
+          <div class="card-body">
+            <h5>France</h5>
+            <p>Cultural and academic hub</p>
           </div>
-
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-3 footer-links text-start">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
-                <i class="bi bi-globe footitem"></i> Study Abroad Guidance and Support
-              </a></li>
-            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
-                <i class="bi bi-award footitem"></i> Scholarship Assistance
-              </a></li>
-            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
-                <i class="bi bi-pass-fill footitem"></i> Visa Support
-              </a></li>
-            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
-                <i class="bi bi-people-fill footitem"></i> Immigration Services
-              </a></li>
-            <li><a class="footitem" href="#services" onclick="smoothScroll(event, '#services')">
-                <i class="bi bi-translate footitem"></i> Language Training
-              </a></li>
-          </ul>
-
+      <!-- Czech Republic -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/czech-republic.png" alt="Czech Republic">
+          <div class="card-body">
+            <h5>Czech Republic</h5>
+            <p>Quality education in heart of Europe</p>
+          </div>
         </div>
+      </div>
 
-        <div class="col-lg-3 col-md-3 footer-links  text-start">
-          <h4>Global Education Access</h4>
-          <ul>
-            <li>
-              <a class="footitem">
-                <i class="bi bi-mortarboard-fill footitem"></i> Global Education Access
-              </a>
-            </li>
-            <li>
-              <a class="footitem">
-                <i class="bi bi-globe footitem"></i> Worldwide Network
-              </a>
-            </li>
-            <li>
-              <a class="footitem">
-                <i class="bi bi-gear-fill footitem"></i> Comprehensive Support
-              </a>
-            </li>
-            <li>
-              <a class="footitem">
-                <i class="bi bi-chat-left-dots-fill "></i> Free Consultation
-              </a>
-            </li>
-          </ul>
+      <!-- Lithuania -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/lithuania.png" alt="Lithuania">
+          <div class="card-body">
+            <h5>Lithuania</h5>
+            <p>Innovative study programs</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Latvia -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/latvia.png" alt="Latvia">
+          <div class="card-body">
+            <h5>Latvia</h5>
+            <p>Affordable European education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Poland -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/poland.png" alt="Poland">
+          <div class="card-body">
+            <h5>Poland</h5>
+            <p>Rich academic heritage</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hungary -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/hungary.png" alt="Hungary">
+          <div class="card-body">
+            <h5>Hungary</h5>
+            <p>Affordable and quality education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UK -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/united-kingdom.png" alt="UK">
+          <div class="card-body">
+            <h5>UK</h5>
+            <p>Historic academic excellence</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canada -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/canada.png" alt="Canada">
+          <div class="card-body">
+            <h5>Canada</h5>
+            <p>World-class educational institutions</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- USA -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/usa.png" alt="USA">
+          <div class="card-body">
+            <h5>USA</h5>
+            <p>Explore top universities in the USA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finland -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/finland.png" alt="Finland">
+          <div class="card-body">
+            <h5>Finland</h5>
+            <p>Innovative and high-quality education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Denmark -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/denmark.png" alt="Denmark">
+          <div class="card-body">
+            <h5>Denmark</h5>
+            <p>Study in a progressive environment</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sweden -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/sweden.png" alt="Sweden">
+          <div class="card-body">
+            <h5>Sweden</h5>
+            <p>World-class research opportunities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Germany -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/germany.png" alt="Germany">
+          <div class="card-body">
+            <h5>Germany</h5>
+            <p>Affordable and high-quality education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Malta -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/malta.png" alt="Malta">
+          <div class="card-body">
+            <h5>Malta</h5>
+            <p>Study in a Mediterranean paradise</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Austria -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/austria.png" alt="Austria">
+          <div class="card-body">
+            <h5>Austria</h5>
+            <p>Cultural and academic excellence</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spain -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/spain.png" alt="Spain">
+          <div class="card-body">
+            <h5>Spain</h5>
+            <p>Vibrant culture and education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ireland -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/ireland.png" alt="Ireland">
+          <div class="card-body">
+            <h5>Ireland</h5>
+            <p>World-class universities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mauritius -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/mauritius.png" alt="Mauritius">
+          <div class="card-body">
+            <h5>Mauritius</h5>
+            <p>Study in a tropical paradise</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slovenia -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/slovenia.png" alt="Slovenia">
+          <div class="card-body">
+            <h5>Slovenia</h5>
+            <p>Affordable European education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slovakia -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/slovakia.png" alt="Slovakia">
+          <div class="card-body">
+            <h5>Slovakia</h5>
+            <p>Quality education in Central Europe</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Georgia -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/georgia.png" alt="Georgia">
+          <div class="card-body">
+            <h5>Georgia</h5>
+            <p>Affordable and quality education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kazakhstan -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/kazakhstan.png" alt="Kazakhstan">
+          <div class="card-body">
+            <h5>Kazakhstan</h5>
+            <p>Study in Central Asia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kyrgyzstan -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/kyrgyzstan.png" alt="Kyrgyzstan">
+          <div class="card-body">
+            <h5>Kyrgyzstan</h5>
+            <p>Affordable education in Central Asia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Uzbekistan -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/uzbekistan.png" alt="Uzbekistan">
+          <div class="card-body">
+            <h5>Uzbekistan</h5>
+            <p>Cultural and academic opportunities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Egypt -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/egypt.png" alt="Egypt">
+          <div class="card-body">
+            <h5>Egypt</h5>
+            <p>Study in the heart of the Middle East</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Malaysia -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/malaysia.png" alt="Malaysia">
+          <div class="card-body">
+            <h5>Malaysia</h5>
+            <p>Affordable and quality education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Zealand -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/circle.png" alt="New Zealand">
+          <div class="card-body">
+            <h5>New Zealand</h5>
+            <p>Experience quality education</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Australia -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/australia.png" alt="Australia">
+          <div class="card-body">
+            <h5>Australia</h5>
+            <p>Study in vibrant cities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Singapore -->
+      <div class="col-md-3 col-sm-6">
+        <div class="destination-card">
+          <img src="assets/images/logos/singapore.png" alt="Singapore">
+          <div class="card-body">
+            <h5>Singapore</h5>
+            <p>Asia's education hub</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="social-links d-flex mt-2 text-center justify-content-center">
-      <a href="https://chat.whatsapp.com/IKipgDBK5BvIIi7wIkdSZB"><i class="bi bi-whatsapp"></i></a>
-      <a href="https://www.instagram.com/sheen_fly/"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.youtube.com/@sheenfly"><i class="bi bi-youtube"></i></a>
-      <a><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <div class="container text-center mt-4 mb-4">
-      <p class="copyright-text d-flex justify-content-center align-items-center">
-        © <span>Copyright</span>
-        <strong class="px-1 sitename">
-          <span style="color: #fd3d0d; font-weight: bold;">ShEEN</span>
-          <span style="color: #0d83fd; font-weight: bold;">fly</span>
-        </strong>
-        <span>All Rights Reserved</span>
-      </p>
-
-      <div class="credits d-flex justify-content-center align-items-center mb-2">
-        <span>Developed by &nbsp;</span>
-        <a href="https://www.linkedin.com/in/muhammedsiyadt/" target="_blank"
-          style="color: #0d83fd; font-weight: bold;"> Muhammed Siyad</a>
-        <span class="mx-3">|</span>
-        <div class="social-icons">
-          <a href="tel:+917558001145" target="_blank" class="me-3" style="color: #fd3d0d;">
-            <i class="bi bi-telephone-fill"></i>
-          </a>
-          <a href="https://wa.me/917558001145" target="_blank" class="me-3" style="color: #25D366;">
-            <i class="bi bi-whatsapp"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/muhammedsiyadt/" target="_blank" class="me-3" style="color: #0d83fd;">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="https://www.instagram.com/siyad___._10/" target="_blank" class="me-3" style="color: #C13584;">
-            <i class="bi bi-instagram"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-
-
-    </a>
-    </div>
-    </div>
-  </footer>
-
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <div class="floating-icons">
-    <a href="https://chat.whatsapp.com/IKipgDBK5BvIIi7wIkdSZB" target="_blank" class="whatsapp-icon"
-      title="Chat on WhatsApp">
-      <i class="bi bi-whatsapp"></i>
-    </a>
-    <a href="tel:+917907487289" target="_blank" class="call-icon" title="Call Now">
-      <i class="bi bi-telephone-fill"></i>
-    </a>
-
   </div>
 
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
