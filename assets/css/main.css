@@ -1796,7 +1796,7 @@ section,
   transition: transform 0.6s ease, box-shadow 0.6s ease, background 0.6s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
 }
-
+ 
 .service-card:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.388); /* Even softer shadow effect */
   box-shadow: 2px 2px 2px rgba(0, 123, 255, 0.7), -2px -2px 2px rgba(255, 94, 0, 0.8);
