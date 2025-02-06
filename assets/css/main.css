@@ -450,6 +450,19 @@ h6 {
   }
 }
 
+#whatsapp-btn {
+  background-color: rgb(37, 211, 102); 
+  border-radius: 50px; 
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth effect */
+}
+
+#whatsapp-btn:hover {
+  background-color: rgb(0, 255, 94); 
+  color: #000000;
+  border-radius: 50px; 
+}
+
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -3041,3 +3054,4 @@ section,
     font-size: 14px;
   }
 }
+
