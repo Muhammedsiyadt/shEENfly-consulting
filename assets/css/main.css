@@ -1172,7 +1172,7 @@ section,
 --------------------------------------------------------------*/
 
 .why-choose-us {
-  background-color: #dadada3a;
+  background-color: #ffffff;
 }
 .why-choose-us .section-title h2 {
   font-size: 36px;
@@ -1323,6 +1323,7 @@ section,
 .features-cards {
   --default-color: #555;
   --heading-color: #333;
+  background-color: #cde1f512;
 }
 
 .features-cards .feature-box {
@@ -2966,13 +2967,13 @@ section,
 
 /* ShEEN International Section Styles */
 .sheen-international {
-  border: #37a09c solid 3px;
-  padding: 20px;
-  
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #cde1f512, #e6f0fd5b); /* Subtle gradient background */
+  color: #000000; /* Black text for contrast */
 }
 
 .sheen {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -2980,49 +2981,39 @@ section,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-}
-
-.sheen-icon svg {
-  width: 150px;
-  height: auto;
-  fill: #0d83fd; /* Brand blue color */
-  transition: transform 0.3s ease;
-}
-
-.sheen-icon svg:hover {
-  transform: scale(1.1); /* Hover effect for icon */
+  gap: 60px;
 }
 
 .sheen-text {
   flex: 1;
+  max-width: 700px; /* Limit text width for better readability */
 }
 
 .sheen-text h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #0d83fd; /* Brand blue color */
+  font-size: 36px;
+  font-weight: 800;
+  color: #0d83fd;
   margin-bottom: 20px;
-  
+  line-height: 1.3;
 }
 
 .sheen-text h2 span {
-  color: #fd3d0d; /* Brand orange color */
+  color: #dc0f0b; /* Brand orange color */
 }
 
 .sheen-text p {
-  font-size: 17px;
-  color: #000000;
+  font-size: 18px;
+  color: #333333; /* Dark gray text */
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
 .sheen-text strong {
-  color: #000000;
+  color: #dc0f0b; /* Brand orange color */
 }
 
 .contact-info p {
-  font-size: 16px;
+  font-size: 18px;
   color: #0d83fd; /* Brand blue color */
   margin-top: 20px;
 }
@@ -3034,19 +3025,57 @@ section,
 }
 
 .contact-info a:hover {
-  color: #fd3d0d; /* Brand orange color */
+  color: #dc0f0b; /* Brand orange color on hover */
   letter-spacing: 1px;
 }
 
+.sheen-icon {
+  flex-shrink: 0;
+}
+
+.sheen-icon img.animated-icon {
+  width: 250px; /* Larger icon */
+  height: auto;
+  animation: float 4s ease-in-out infinite; /* Floating animation */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .sheen-content {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
   }
 
-  .sheen-icon svg {
-    width: 100px;
+  .sheen-text {
+    max-width: 100%;
+  }
+
+  .sheen-text h2 {
+    font-size: 32px;
+  }
+
+  .sheen-text p {
+    font-size: 16px;
+  }
+
+  .sheen-icon img.animated-icon {
+    width: 200px; /* Slightly smaller icon for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .sheen-international {
+    padding: 60px 20px;
   }
 
   .sheen-text h2 {
@@ -3057,8 +3086,11 @@ section,
     font-size: 14px;
   }
 
+  .sheen-icon img.animated-icon {
+    width: 150px; /* Smaller icon for mobile */
+  }
+
   .contact-info p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
-
