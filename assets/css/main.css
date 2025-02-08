@@ -2343,6 +2343,17 @@ section,
   margin-bottom: 2rem;
 }
 
+.textarea {
+  height: 300px;
+}
+
+/* Adjust or remove the height for small screens */
+@media (max-width: 768px) {
+  .textarea {
+    height: auto; /* or set a different height */
+  }
+}
+
 .contact .contact-form .form-control,
 .contact .contact-form .form-select {
   padding: 0.875rem 1.25rem;
