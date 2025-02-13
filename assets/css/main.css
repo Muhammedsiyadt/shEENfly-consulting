@@ -2978,15 +2978,34 @@ section,
 
 /* ShEEN International Section Styles */
 .sheen-international {
-  padding: 30px 20px;
-  background: rgb(245 245 245 / 25%);
-  color: #000000;
-  border: #ffae0010 1px solid;
-  overflow: hidden;
   position: relative;
-  margin-bottom: 50px;
+  border: 1px solid #c9c9c910;
+  padding: 17px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.sheen-international::before,
+.sheen-international::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fd3d0d;
+  z-index: 1;
+}
+
+.sheen-international::before {
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.sheen-international::after {
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
 .sheen {
   margin: 0 auto;
 }
