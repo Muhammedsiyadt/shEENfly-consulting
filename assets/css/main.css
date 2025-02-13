@@ -2269,7 +2269,7 @@ section,
 .contact .info-item {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .contact .info-item:last-child {
@@ -2344,7 +2344,7 @@ section,
 }
 
 .textarea {
-  height: 300px;
+  height: 355px;
 }
 
 /* Adjust or remove the height for small screens */
@@ -2978,15 +2978,16 @@ section,
 
 /* ShEEN International Section Styles */
 .sheen-international {
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #cde1f55a, #e6f0fda0);
+  padding: 30px 20px;
+  background: rgb(245 245 245 / 25%);
   color: #000000;
+  border: #ffae0010 1px solid;
   overflow: hidden;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .sheen {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -2999,24 +3000,23 @@ section,
 
 .sheen-text {
   flex: 1;
-  max-width: 700px;
 }
 
 .sheen-text h2 {
-  font-size: 48px;
+  margin-top: 10px;
+  font-size: 40px;
   font-weight: 800;
   color: #0d83fd;
-  margin-bottom: 20px;
   line-height: 1.3;
   animation: fadeInLeft 1s ease-in-out;
 }
 
 .sheen-text h2 span {
-  color: #dc0f0b;
+  color: #fd3d0d;
 }
 
 .sheen-text p {
-  font-size: 18px;
+  font-size: 16px;
   color: #333333;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -3069,7 +3069,7 @@ section,
 }
 
 .sheen-icon img.animated-icon {
-  width: 300px;
+  width: 200px;
   height: auto;
   animation: pulse 3s ease-in-out infinite;
 }
@@ -3134,7 +3134,11 @@ section,
 
 @media (max-width: 576px) {
   .sheen-international {
-    padding: 80px 20px;
+    padding: 14px 15px;
+    padding-bottom: 40px;
+  }
+  .sheen-content {
+    display: block;
   }
 
   .sheen-text h2 {
@@ -3169,4 +3173,60 @@ section,
 
 svg {
   animation: wave 3s ease-in-out infinite;
+}
+
+/* Circle Badge Styles */
+.circle-badge {
+  color: #000000; /* White text */
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite;
+}
+
+.circle-badge:hover::before {
+  transform: scale(1);
+}
+
+.badge-icon {
+  font-size: 24px;
+  animation: spin 4s linear infinite;
+}
+
+.badge-text {
+  color: #fd3d0d; /* White text */
+  font-weight: bolder;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid #0000003d;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .circle-badge {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .badge-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .circle-badge {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .badge-icon {
+    font-size: 18px;
+  }
 }
