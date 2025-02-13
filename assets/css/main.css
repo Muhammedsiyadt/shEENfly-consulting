@@ -150,7 +150,7 @@ h6 {
 }
 
 .scrolled .header .header-container {
-  background: color-mix(in srgb, var(--surface-color), transparent 5%);
+  background: #ffffff;
 }
 
 .header .logo {
@@ -1174,6 +1174,8 @@ section,
 
 .why-choose-us {
   background-color: #ffffff;
+  margin-top: 50px;
+  border-top: #0000000e 1px solid;
 }
 .why-choose-us .section-title h2 {
   font-size: 36px;
@@ -1185,6 +1187,10 @@ section,
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.why-choose-us .section-title{
+  padding-bottom: 10px;
 }
 
 .why-choose-us ul li {
@@ -1268,7 +1274,7 @@ section,
 }
 
 .why-choose-us ul li strong {
-  color: #ff0000;
+  color: #fd3d0d;
 }
 
 .why-choose-us ul li span {
@@ -1280,9 +1286,9 @@ section,
 
 .why-choose-us img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 20px; /* Add spacing above the image */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0px 4px 10px #00000041; /* Subtle shadow for depth */
 }
 
 @media (max-width: 768px) {
@@ -1304,7 +1310,7 @@ section,
   }
 
   .why-choose-us img {
-    margin-top: 15px;
+    display: none;
   }
 }
 
