@@ -13,11 +13,7 @@
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="https://sheenfly.com/assets/img/Logo.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="https://sheenfly.com/assets/img/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="https://sheenfly.com/assets/img/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://sheenfly.com/assets/img/apple-touch-icon.png" />
-  <link rel="manifest" href="https://sheenfly.com/assets/img/site.webmanifest" />
+  <link rel="icon" href="https://sheenfly.com/assets/img/Logo.ico" />
 
   <!-- Structured Data for Google -->
   <script type="application/ld+json">
@@ -66,8 +62,7 @@
 
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/sheen.png" alt="" />
       </a>
@@ -289,10 +284,6 @@
         <div class="sheen-content">
           <div class="sheen-text">
             <!-- Creative Circle Badge -->
-            <div class="circle-badge">
-              <span class="badge-icon">🏛️</span>
-              <span class="badge-text">Mother Firm</span>
-            </div>
             <h2><span>ShEEN</span> <span style="color: #0d83fd;">International</span></h2>
             <p>
               <strong>ShEEN <span style="color: #0d83fd;">International</span></strong> has been a beacon of excellence
@@ -672,6 +663,40 @@
     </section>
     <!-- /Call To Action Section -->
 
+    <section class="testimonial-section ">
+      <div class="testimonial-container container">
+        <div class="testimonial-slider">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-item">
+            <div class="client-comment">
+              <p>"I am greatly thankful to 'SHEENfly' for their valuable guidance and support to achieve my
+                goal of getting admission in best universities and to get visa of France. I experienced the
+                staff here very friendly. I was not aware that I could study abroad with low cost of all.
+                The consultant have a very good Knowledge in helping me to find out the exact program. I am
+                so happy that I found SHEENfly. So if anyone have the dream to study abroad then this is the
+                best ever consultant for students bright future."</p>
+              <span>- AFRAHA ABDUL KAREEM </span>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="client-comment">
+              <p>"on your journey to Germany and securing admission to Philipps University Marburg For MSc in
+                Economics and Institutions with a fully funded scholarship! It was a great blessing to be a
+                part of your journey. May this be a stepping stone to a successful future."</p>
+              <span>- HISSA FATHIMA </span>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+         
+        </div>
+        <!-- Navigation Buttons Container -->
+        <div class="navigation-buttons">
+          <button class="prev-btn">&#10094;</button>
+          <button class="next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
     <!-- Faq Section -->
 
     <section id="call-to-action-2" class="call-to-action-2 section dark-background"></section>
@@ -786,8 +811,11 @@
     </section>
     <!-- /Call To Action 2 Section -->
 
+
+
+
     <!-- Contact Section -->
-    <section id="contact" class="contact section ">
+    <section id="contact" class="contact section " style="border-top: 2px solid #7a7a7a07; background: #ffffff;">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
@@ -1113,12 +1141,11 @@
 
     <div class="container text-center mt-4 mb-4">
       <p class="copyright-text d-flex justify-content-center align-items-center">
-        © <span>Copyright</span>
-        <strong class="px-1 sitename">
-          <span style="color: #fd3d0d; font-weight: bold;">ShEEN</span>
-          <span style="color: #0d83fd; font-weight: bold;">fly</span>
+        © <span>Copyright </span>
+        <strong class=" sitename">
+          <span style="color: #fd3d0d; font-weight: bold;  font-size: 13px;"> &nbsp; EDUSALIS Solutions LLP &nbsp;</span>
         </strong>
-        <span>All Rights Reserved</span>
+        <span> All Rights Reserved</span>
       </p>
 
       <!--       <div class="credits d-flex justify-content-center align-items-center mb-2">
@@ -1347,6 +1374,46 @@
     });
 
 
+  </script>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.testimonial-item');
+    const totalSlides = slides.length;
+    const slider = document.querySelector('.testimonial-slider');
+    const nextButton = document.querySelector('.next-btn');
+    const prevButton = document.querySelector('.prev-btn');
+
+    function showSlide(index) {
+      if (index >= totalSlides) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else {
+        currentIndex = index;
+      }
+      const offset = -currentIndex * 100;
+      slider.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Auto slide
+    let autoSlide = setInterval(nextSlide, 5000);
+
+    // Pause auto slide on hover
+    const container = document.querySelector('.testimonial-container');
+    container.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    container.addEventListener('mouseleave', () => autoSlide = setInterval(nextSlide, 5000));
   </script>
 
   <!-- Vendor JS Files -->
